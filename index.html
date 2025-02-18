@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Login by Manjeet</title>
+    <title>Love Login by disha</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -14,8 +14,8 @@
             height: 100vh;
             background: linear-gradient(135deg, #ff758c, #ff7eb3);
             font-family: 'Poppins', sans-serif;
-            overflow: hidden; /* Prevent scrolling */
-            position: relative; /* Needed for absolute positioning of emojis */
+            overflow: hidden; 
+            position: relative; 
         }
         
         #login-form {
@@ -27,7 +27,7 @@
             text-align: center;
             animation: fadeIn 1s ease-in-out;
             position: relative;
-            z-index: 10; /* Ensure form stays on top */
+            z-index: 10; 
         }
         
         label {
@@ -79,7 +79,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Falling emoji animation */
+        
         .falling-emoji {
             position: absolute;
             font-size: 2em;
@@ -107,7 +107,7 @@
         const submitBtn = document.getElementById('submit-btn');
         const resultDiv = document.getElementById('result');
 
-        const secretCode = 'Manjeet'; // Replace with your secret code
+        const secretCode = 'disha'; // Replace with your secret code
         const nextPageUrl = 'main.html'; // Replace with the URL of the new page
 
         form.addEventListener('submit', (e) => {
@@ -115,25 +115,25 @@
             const userInput = codeInput.value.trim();
             if (userInput === secretCode) {
                 resultDiv.innerHTML = 'Baby';
-                window.location.href = nextPageUrl; // Redirect to new page
+                window.location.href = nextPageUrl; 
             } else {
                 resultDiv.innerHTML = 'Naa Tum meri baby nhi hoo kon hooo tum kaha hai meri Shobhit';
             }
         });
 
-        // Function to create falling emojis
+        
         function createFallingEmoji() {
             const emojis = ['❤️', '💖', '💘', '💕', '💞', '💓', '💗', '😍'];
             const emoji = document.createElement('div');
             emoji.classList.add('falling-emoji');
             emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-            emoji.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
-            emoji.style.animationDuration = (Math.random() * 3 + 2) + 's'; // Random speed for fall
+            emoji.style.left = Math.random() * 100 + 'vw'; 
+            emoji.style.animationDuration = (Math.random() * 3 + 2) + 's'; 
             document.body.appendChild(emoji);
-            setTimeout(() => emoji.remove(), 5000); // Remove emoji after it falls
+            setTimeout(() => emoji.remove(), 5000); 
         }
 
-        // Generate falling emojis every 500ms
+        
         setInterval(createFallingEmoji, 500);
     </script>
 </body>
